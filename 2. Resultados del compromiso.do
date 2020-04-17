@@ -3,7 +3,7 @@
 Proyecto: 								 Compromiso de Desempeño-Racionalización 
 										 2020 
 Autor: 									 Hugo Fernandez-Racionalización-UPP
-Ultima fecha de modificación:			 05/03/2020
+Ultima fecha de modificación:			 20/03/2020
 Outputs:								 Excel con los resultados del indicador
 											
 ------------------------------------------------------------------------------*/
@@ -16,7 +16,7 @@ set excelxlsxlargefile on
 set scheme plottig 
 
 *Set global
-global work "D:\Proyectos\12. Seguimiento del compromiso por desempeño"
+global work "D:\Minedu\12. Seguimiento del compromiso por desempeño"
 cd "$work\temp" 
 global inputs "$work\Insumos"
 global resultados "$work\Resultados"
@@ -340,7 +340,7 @@ limpia_oficios
 *Validacion de los movimientos 
 
 preserve
-	use "$inputs\Nexus\nexus_8sira", clear // 21/02/2020
+	use "$inputs\Nexus\nexus_11", clear // 13/03/2020
 	plazaunica
 	keep if real(codtipotrab)==10 & real(codsubtipt)==13
 	contract codplaza descargo
