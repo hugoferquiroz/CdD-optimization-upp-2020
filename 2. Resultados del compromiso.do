@@ -176,7 +176,7 @@ program define resultado_meta
 	cap mvencode movimiento*, mv(0)
 	egen total_movimientos=rowtotal(movimiento_oficio_810 - movimiento_oficio_143) 
 	
-	gen avance_meta=total_movimientos*100/meta if estado==0
+	gen avance_meta=ceil(total_movimientos*100/meta) if estado==0
 
 	gen resultado=1==avance_meta>=80
 	replace resultado=. if estado==1
